@@ -9,10 +9,11 @@
 
 		<!-- Title + Favicon -->
 		<title>SM737.Site</title>
-		<link rel="icon" type="image/x-icon" href="../images/Favicon.ico">
+		<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 
 		<!-- CSS -->
 		<link rel="stylesheet" href="../css/styles.css">
+		<link rel="stylesheet" href="../css/game_pages.css">
 
 
 	</head>
@@ -25,25 +26,32 @@
 
 		<main>
 			
-            <!-- Game Iframe -->
-			<iframe class="fade_in" id="game" src="games/coin_clicker_embed.html" width="81%" style="aspect-ratio: 16 / 9; margin-left: 11.5%; margin-top: 11px; border-radius: 10px;" frameborder="0" scrolling="no"></iframe>
-			<button onclick="toggleFullScreen()" width="20px" height="20px" style="cursor: pointer; background-color: transparent; border: none; position: relative; z-index: 2; right: 27px; bottom: 4px;">  <img src="../images/fullscreen_button.svg" width="20px"> </img>  </button>
-            
+			<div class="game_box fade_in">
+           		<!-- Game Iframe -->
+				<iframe class="game_iframe" id="game" src="games/coin_clicker_embed.html" frameborder="0" scrolling="no"></iframe>
 
-				<!-- Text -->
-				<div class="fade_in" width="81%" style="max-width: 81%; float: left; margin-left: 11.5%; margin-top: 11px;">
-					<h1 class="Sonorus game_page_title">Coin Clicker</h1>
-					<p class="VarelaRound game_description">Simple Clicker Game I Made To Practice UI Design</p>
-					<p class="VarelaRound game_description" ><em><a class="link" target="_blank" href="https://gamesounds.xyz/dir=OpenBundle/Background%20Music%20and%20Loops">8 Bit Loop</a> by GameSounds</em></p>
-					<p class="VarelaRound game_description"><em>Please give feedback&nbsp;/ report bugs in the comments on <a class="link" href="https://sm737.itch.io/paper-plane" target="_blank">itch.io</a> </em> </p>
+				<!--  Title And Buttons  -->
+				<div class="title_buttons" id="title_buttons">
+					<p class="title">Coin Clicker</p>
+					<button onclick="toggleFullScreen()" class="button"> <img src="../images/buttons/fullscreen.svg" class="button_image"></img> </button>
+					<button onclick="toggleDescription()" class="button"> <img src="../images/buttons/description_on.svg" class="button_image" id="description_toggle_image"></img> </button>
 				</div>
 
-            
+				<!--  Description  -->
+				<div class="description" id="description">
+					<p>Simple Clicker Game I Made To Practice UI Design</p>
+					<p><em><a href="https://gamesounds.xyz/dir=OpenBundle/Background%20Music%20and%20Loops" target="_blank">8 Bit Loop</a> by GameSounds</em></p>
+				</div>
+			</div>
 
 		</main>
 
+		<footer>
+			<iframe src="../footer.html" width="100%" height="35px" frameborder="0" scrolling="no" alt="footer"></iframe>
+		</footer>
+
 		<script src="../scripts/fade_in.js"></script>
-		<script src="../scripts/fullscreen_iframe.js"></script>
+		<script src="../scripts/game_iframe.js"></script>
 
 	</body>
 </html>

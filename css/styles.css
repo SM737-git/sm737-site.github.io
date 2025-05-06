@@ -9,20 +9,23 @@
     src: url(../fonts/Sonorous.otf);
 }
 
-.VarelaRound{
-    font-family: "VarelaRound";
-}
-.Sonorus{
+.title{
+    color: #ffffff;
     font-family: "Sonorus";
 }
 
-
-.text_color{
-    color: #ffffff;
+.text{
+    color: #ececec;
+    font-family: "VarelaRound";
 }
 
 .link{
     color: #e6f4ff;
+    font-family: "VarelaRound";
+}
+
+.varela_round{
+    font-family: "VarelaRound";
 }
 
 
@@ -39,6 +42,31 @@ header{
 
 body {
     background-color: #444444;
+    display: flex;
+    flex-direction: column;
+}
+
+html, body { /* Keeps footer on bottom */
+    height: 100%;
+    margin: 0;
+}
+
+main{ /* Keeps footer on bottom */
+    flex: 1;
+}
+
+footer{ 
+    background-color: #333333;
+    margin-top: 20px;
+    border-top: 0.1rem solid #666666;
+}
+
+.divider{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    padding-bottom: 7px;
 }
 
 /* Fade In Anim */
@@ -53,55 +81,33 @@ body {
     transform: translateY(0) scale(1);
 }
 
+/* Responsive Changes */
 
-/* Index */
-.latest_project_cover{
-    border-width: 3px;
-    border-color: #ffffff00;
-    border-style: solid;
-    transition: border-color 0.3s ease;
+/* Banner */
+@media (min-width: 701px) {
+    .banner{
+        width: 1920px;
+        height: auto;
+    }
 }
 
-.latest_project_cover:hover{
-    border-color: #eaeaea;
+@media (max-width: 700px) {
+    .banner{
+        width: 274%;
+        height: auto;
+    }
 }
 
-/* Games */
-.game_container{
-    width: 20%;
+
+/* Divider */
+@media (min-width: 1201px) {
+    .divider{
+        width: 998.4;
+    }
 }
 
-
-.game_title{
-    text-align: center;
-    color: #ffffff;
-    margin-top: 7px;
-    font-size: 1.4vw;
-    text-decoration: none;
-}
-
-.game_cover{
-    border-radius: 13px;
-    border-width: 3px;
-    border-color: #ffffff00;
-    border-style: solid;
-    scale: 0.98;
-    transition: border-color 0.3s ease;
-    transition: scale 0.3s ease;
-}
-
-.game_cover:hover{
-    border-color: #eaeaea;
-    scale: 1.01;
-}
-
-/* Game Pages */
-.game_page_title{
-    color: #ffffff;
-    font-size: clamp(4px, 1.6vw, 57px)
-}
-
-.game_description{
-    color: #ffffff;
-    font-size: clamp(4px, 1.2vw, 57px)
+@media (max-width: 1200px) {
+    .divider{
+        width: 83%;
+    }
 }

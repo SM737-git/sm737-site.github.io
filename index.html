@@ -9,11 +9,93 @@
 
 		<!-- Title + Favicon -->
 		<title>SM737.Site</title>
-		<link rel="icon" type="image/x-icon" href="images/Favicon.ico">
+		<link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
 		<!-- CSS -->
 		<link rel="stylesheet" href="css/styles.css">
+		<style>
 
+			.latest_project_cover{
+				border-width: 3px;
+				border-color: #ffffff00;
+				border-style: solid;
+			}
+
+			.latest_project_cover:hover{
+				border-color: #eaeaea;
+			}
+
+
+			.latest_project_link{
+				text-decoration:none;
+			}
+
+			.latest_project_link:hover{
+				text-decoration: underline;
+			}
+
+
+			@media (min-width: 1251px) {
+				.latest_project{
+					width: 1172px; 
+					margin: 0 auto; 
+					display: flex; 
+					margin-top: 20px;
+				}
+
+				.latest_project_mobile{
+					display: none;
+				}
+
+
+				.about{
+					width: 1172px; 
+					margin: 0 auto; 
+					display: flex; 
+					margin-top: 20px;
+				}
+
+				.about_description{
+					font-size: 23px
+				}
+
+				.about_title{
+					font-size: 30px
+				}
+			}
+
+			@media (max-width: 1250px) {
+				.latest_project{
+					display: none;
+				}
+
+				.about{
+					width: 85%; 
+					margin-left: 7.5%; 
+					display: flex; 
+					margin-top: 20px;
+				}
+
+				.about_description{
+					font-size: 23px
+				}
+
+				.about_title{
+					font-size: 30px
+				}
+			}
+
+			@media (max-width: 850px) {
+				.about_description{
+					font-size: clamp(5px, 3vw, 23px);
+				}
+
+				.about_title{
+					font-size: clamp(5px, 3.9vw, 30px);
+				}
+			}
+
+		</style>
 
 	</head>
 
@@ -24,52 +106,71 @@
 		</header>
 
 		<main>
-			<!-- Banner Image -->
-			<img src="images/banner.png" width="device-width" height=auto style="max-width:100%;">
+
+			<!-- Banner -->
+			 <div style="width: 100%; overflow: hidden; display: flex; justify-content: center;"> <!-- Banner Wrapper-->
+				<img src="images/banners/banner.png" class="banner">
+			</div>
 
 			<!-- Slogan Text -->
-			<h1 style="text-align: center;" class="VarelaRound text_color"> I Is Gamedev, I Make Games </h1>
+			<h1 style="text-align: center;" class="title varela_round"> I Is Gamedev, I Make Games </h1>
 
 			<!-- Divider -->
-			<img src="images/Divider.svg" width="52%" height="auto" style="display: block; margin-left: auto; margin-right: auto; margin-top: 20px; padding-bottom: 7px;" class="fade_in">
+			<img src="images/divider.svg" class="fade_in divider">
+
 
 			<!--  Latest Project -->
-			<div class="fade_in" style="margin-top: 20px; display: flex; align-items: center;">
-
-				<a href="games_pages/kittenbot_os.html" style="max-width: 30%;  float: left; margin-left:20vw;">
-					<img src="images/latest_project.png" width="100%" height="auto" style="border-radius: 13px;" class="latest_project_cover">
-				</a>
-				
-
-				
-				<div style="float: left; padding-left: 30px; max-width: 30%;">
-					<p style=" font-size: clamp(9px, 4vw, 65px);" class="Sonorus text_color"> Latest Project </p>
-					<p style=" font-size: clamp(4px, 1.2vw, 57px);" class="VarelaRound text_color">
-						Kittenbot OS Is A Open Source "Operating System" That Allows You To Store Multiple Games On Any Device Designed For Makecode Arcade Games! It Comes With A Calculator, Stopwatch, And Screensaver App, A Settings Menu To Change The Color Scheme And 3 Pre-Made Games (flappy bird, spaceships and ballistic balloons). There Is Also A Editable Version Without Games That You Can Add Your Own Games To! 
-					</p>
+			<div class="latest_project">
+				<div class="fade_in" style="display: flex;">
+					
+					<a href="games_pages/kittenbot_os.html" width="576px">
+						<img src="images/games/kittenbot_os.png" width="576px" height="auto" style="border-radius: 13px;" class="latest_project_cover">
+					</a>
+					
+					<div style="margin: auto; padding-left: 20px;" width="576px">
+						<a href="games_pages/kittenbot_os.html" style="text-decoration:none;"> <p style="font-size: 58px; max-width: 576px;" class="latest_project_link title"> Latest Project </p> </a>
+						<p style=" font-size: 23px; max-width: 576px;" class="text">
+							Kittenbot OS Is A Open Source "Operating System" That Allows You To Store Multiple Games On Any Device Designed For Makecode Arcade Games! It Comes With A Calculator, Stopwatch, And Screensaver App, A Settings Menu To Change The Color Scheme And 3 Pre-Made Games (flappy bird, spaceships and ballistic balloons). There Is Also A Editable Version Without Games That You Can Add Your Own Games To! 
+						</p>
+					</div>
+					
 				</div>
 			</div>
 
+			<!--  Latest Project Mobile  -->
+			<div class="fade_in latest_project_mobile" style="margin-top: 20px;">
+
+				<a href="games_pages/kittenbot_os.html" style="text-decoration:none;">
+					<img src="images/games/kittenbot_os.png" width="85%" height="auto" style="border-radius: 13px; margin-left: 7.5%;" class="latest_project_cover">
+					<p style="margin-top: 10px; font-size: 40px; text-align: center;" width="100%" class="latest_project_link title"> Latest Project </p>
+				</a>
+
+			</div>
+
 			<!-- Divider -->
-			<img src="images/Divider.svg" width="52%" height="auto" style="display: block; margin-left: auto; margin-right: auto; margin-top: 20px; padding-bottom: 7px;" class="fade_in">
+			<img src="images/divider.svg" class="fade_in divider">
 
 			<!--  About -->
-			<div class="fade_in" style="margin-top: 20px; display: flex; align-items: center;">
-				<div style="float: left; margin-left: 20vw; max-width: 50%;">
-					<p style="font-size: clamp(4px, 1.6vw, 57px)" class="Sonorus text_color"> Hi! Welcome to SM737.site </p>
-					<p style="font-size: clamp(4px, 1.2vw, 57px)" class="VarelaRound text_color"> This is my website where I upload all my games / projects. I make games as a hobby and thought I should make a website for them. Feel free to check out my itch.io page <a href="https://sm737.itch.io/" target=”_blank” class="link"> here. </a> </p>
+			<div class="about">
+				<div class="fade_in" style="display: flex; align-items: center;">
+					<div>
+						<p class="about_title title"> Hi! Welcome to SM737.site </p>
+						<p class="about_description text"> This is my website where I upload all my games / projects. I make games as a hobby and thought I should make a website for them. Feel free to check out my itch.io page <a href="https://sm737.itch.io/" target=”_blank” class="link"> here. </a> </p>
+					</div>
+
+					<img src="images/logo.svg" width="192px" height="auto" style="margin-left: 10px;">
+
 				</div>
-
-				<img src="images/logo.svg" width="10%" height="auto" style="margin-left: 10px;">
-
 			</div>
-
-			<!-- Divider -->
-			<img src="images/Divider.svg" width="52%" height="auto" style="display: block; margin-left: auto; margin-right: auto; margin-top: 20px; padding-bottom: 7px;" class="fade_in">
 			
 		</main>
 
-		<script src="scripts/fade_in.js"></script>
+		<footer>
+			<iframe src="footer.html" width="100%" height="35px" frameborder="0" scrolling="no" alt="footer"></iframe>
+		</footer>
 
 	</body>
+
+		<script src="scripts/fade_in.js"></script>
+
 </html>

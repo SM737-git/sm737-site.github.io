@@ -1,0 +1,75 @@
+a:link, a:visited, a:hover, a:active{
+    color: #e6f4ff;
+}
+
+@media (min-width: 1551px) {
+    .game_box{
+        width: 1459px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 1550px) {
+    .game_box{
+        width: 94%;
+        margin-left: 3%;
+    }
+}
+
+.game_box{
+    margin-top: 11px;
+    padding-bottom: 16px;
+}
+
+.game_iframe{
+    aspect-ratio: 16 / 9;
+    border-radius: 10px 10px 0px 0px;
+    width: 100%;
+}
+
+
+.title_buttons{
+    width: 100%;
+    margin-top: -4px;
+    padding-top: 10px;
+    background-color: #202020;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.title{
+    font-size: 35px;
+    margin-left: 8px;
+}
+
+
+.button{
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    float: right;
+    margin-right: 8px;
+    position: relative;
+    bottom: 42px;
+}
+.button_image{
+    height: 33px;
+}
+
+
+.description{
+    display: none;
+    width: 100%;
+    background-color: #333333;
+    border-radius: 0px 0px 10px 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    font-family: "VarelaRound";
+    font-size: 18px;
+    color: #ececec;
+}
+
+footer{
+    margin-top: -22
+    px;
+}

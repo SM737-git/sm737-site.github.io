@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+
+		<!-- Metadata -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Title + Favicon -->
+		<title>SM737.Site</title>
+		<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="../css/styles.css">
+		<link rel="stylesheet" href="../css/game_pages.css">
+
+
+	</head>
+
+	<body>
+
+		<header>
+			<iframe src="../header.html" width="100%" height="55px" frameborder="0" scrolling="no" alt="header"></iframe>
+		</header>
+
+		<main>
+			
+			<div class="game_box fade_in">
+           		<!-- Game Iframe -->
+				<iframe class="game_iframe" id="game" src="embeds/paper_plane_embed.html" frameborder="0" scrolling="no"></iframe>
+
+				<!--  Title And Buttons  -->
+				<div class="title_buttons" id="title_buttons">
+					<p class="title">Paper Plane</p>
+					<button onclick="toggleFullScreen()" class="button"> <img src="../images/buttons/fullscreen.svg" class="button_image"></img> </button>
+					<button onclick="toggleDescription()" class="button"> <img src="../images/buttons/description_on.svg" class="button_image" id="description_toggle_image"></img> </button>
+				</div>
+
+				<!--  Description  -->
+				<div class="description" id="description">
+					<p>Wanted To Make A Basic Relaxing&nbsp;<em>"Lofi" </em>Endless Runner</p>
+					<p><em>Inspiration was <a target="_blank" href="https://scratch.mit.edu/projects/427163135/">Paper plane</a> by&nbsp;<a target="_blank" href="https://scratch.mit.edu/users/hiron0413/">hiron0413</a></em></p>
+					<p><em>Music</em></p>
+					<p><em><a target="_blank" href="https://www.youtube.com/watch?v=EyAA0odWCpg">Tides</a> by <a target="_blank" href="https://www.youtube.com/channel/UCaBnGIOWREzddN-apP-MTjg">revoir</a></em></p>
+					<p><em><a target="_blank" href="https://youtu.be/0FkvRUGFnHg">Sweet Spot</a> by <a target="_blank" href="https://www.youtube.com/channel/UCWgilZqdEzjA5HFgg17wgeg">hazue</a></em></p>
+					<p><em><a target="_blank" href="https://youtu.be/o7Yx15xXzFk">Echoes</a> by <a target="_blank" href="https://www.youtube.com/channel/UCdr-BT0lFnGpCinn67KZ6Qg">midnight hour</a></em></p>
+				</div>
+			</div>
+
+		</main>
+
+		<footer>
+			<iframe src="../footer.html" width="100%" height="35px" frameborder="0" scrolling="no" alt="footer"></iframe>
+		</footer>
+
+		<script src="../scripts/fade_in.js"></script>
+		<script src="../scripts/game_iframe.js"></script>
+
+	</body>
+</html>

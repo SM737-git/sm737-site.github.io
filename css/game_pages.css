@@ -32,7 +32,7 @@ a:link, a:visited, a:hover, a:active{
     width: 100%;
     margin-top: -4px;
     padding-top: 10px;
-    background-color: #202020;
+    background-color: #232223;
     border-radius: 0px 0px 10px 10px;
 }
 
@@ -59,7 +59,7 @@ a:link, a:visited, a:hover, a:active{
 .description{
     display: none;
     width: 100%;
-    background-color: #333333;
+    background-color: #232223;
     border-radius: 0px 0px 10px 10px;
     padding-top: 5px;
     padding-bottom: 5px;

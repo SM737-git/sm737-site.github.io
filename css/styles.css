@@ -1,4 +1,3 @@
-
 /* Fonts */
 @font-face {
     font-family: "VarelaRound";
@@ -37,13 +36,30 @@
 }
 
 header{
-    background-color: #202020;
+    background-color: #232223;
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+}
+
+footer{
+    background-color: #232223;
+}
+
+.banner{
+    padding-bottom: 10px
 }
 
 body {
-    background-color: #444444;
+    background-color: #131213;
     display: flex;
     flex-direction: column;
+}
+
+.page-background-color{
+    background-color: #232223;
 }
 
 html, body { /* Keeps footer on bottom */
@@ -51,14 +67,16 @@ html, body { /* Keeps footer on bottom */
     margin: 0;
 }
 
-main{ /* Keeps footer on bottom */
+main{ /* Keeps footer on bottom and moves content down so header doesnt cover top*/
     flex: 1;
+    margin-top: 58px;
 }
 
 footer{ 
-    background-color: #333333;
+    background-color: #262b30;
     margin-top: 20px;
     border-top: 0.1rem solid #666666;
+    height: 40px;
 }
 
 .divider{

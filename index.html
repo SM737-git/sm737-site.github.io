@@ -41,6 +41,8 @@
 					margin: 0 auto; 
 					display: flex; 
 					margin-top: 20px;
+					padding: 30px;
+					border-radius: 15px;
 				}
 
 				.latest_project_mobile{
@@ -53,6 +55,8 @@
 					margin: 0 auto; 
 					display: flex; 
 					margin-top: 20px;
+					padding: 30px;
+					border-radius: 15px;
 				}
 
 				.about_description{
@@ -69,11 +73,20 @@
 					display: none;
 				}
 
+				.latest_project_mobile{
+					width: 85%;
+					margin-left: 7.5%;
+					padding: 20px;
+					border-radius: 10px;
+				}
+
 				.about{
 					width: 85%; 
 					margin-left: 7.5%; 
 					display: flex; 
 					margin-top: 20px;
+					padding: 30px;
+					border-radius: 15px;
 				}
 
 				.about_description{
@@ -108,19 +121,12 @@
 		<main>
 
 			<!-- Banner -->
-			 <div style="width: 100%; overflow: hidden; display: flex; justify-content: center;"> <!-- Banner Wrapper-->
-				<img src="images/banners/banner.png" class="banner">
+			 <div style="width: 100%; overflow: hidden; display: flex; justify-content: center;" class="banner">
+				<img src="images/banners/banner.png">
 			</div>
 
-			<!-- Slogan Text -->
-			<h1 style="text-align: center;" class="title varela_round"> I Is Gamedev, I Make Games </h1>
-
-			<!-- Divider -->
-			<img src="images/divider.svg" class="fade_in divider">
-
-
 			<!--  Latest Project -->
-			<div class="latest_project">
+			<div class="latest_project page-background-color">
 				<div class="fade_in" style="display: flex;">
 					
 					<a href="games/kittenbot_os" width="576px">
@@ -138,10 +144,10 @@
 			</div>
 
 			<!--  Latest Project Mobile  -->
-			<div class="fade_in latest_project_mobile" style="margin-top: 20px;">
+			<div class="fade_in latest_project_mobile page-background-color" style="margin-top: 20px;">
 
 				<a href="games/kittenbot_os" style="text-decoration:none;">
-					<img src="images/games/kittenbot_os.png" width="85%" height="auto" style="border-radius: 13px; margin-left: 7.5%;" class="latest_project_cover">
+					<img src="images/games/kittenbot_os.png" width="100%" height="auto" style="border-radius: 13px;" class="latest_project_cover">
 					<p style="margin-top: 10px; font-size: 40px; text-align: center;" width="100%" class="latest_project_link title"> Latest Project </p>
 				</a>
 
@@ -151,11 +157,11 @@
 			<img src="images/divider.svg" class="fade_in divider">
 
 			<!--  About -->
-			<div class="about">
+			<div class="about page-background-color">
 				<div class="fade_in" style="display: flex; align-items: center;">
 					<div>
 						<p class="about_title title"> Hi! Welcome to SM737.site </p>
-						<p class="about_description text"> This is my website where I upload all my games / projects. I make games as a hobby and thought I should make a website for them. Feel free to check out my itch.io page <a href="https://sm737.itch.io/" target=”_blank” class="link"> here. </a> </p>
+						<p class="about_description text"> This is my website where I upload all my games / projects. I make games as a hobby and thought I should make a website for them. Feel free to check out my <a href="https://sm737.itch.io/" target=”_blank” class="link">itch.io</a> and <a href="https://sm737.newgrounds.com/" target=”_blank” class="link">newgrounds</a> pages.</p>
 					</div>
 
 					<img src="images/logo.svg" width="192px" height="auto" style="margin-left: 10px;">

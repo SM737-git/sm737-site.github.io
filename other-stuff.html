@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+
+		<!-- Metadata -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Title + Favicon -->
+		<title>SM737.Site</title>
+		<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="css/styles.css">
+		<style>
+
+
+            @media (min-width: 991px) {
+                .banner{
+                    width: 1920px;
+                    height: auto;
+                }
+            }
+
+            @media (max-width: 990px) {
+                .banner{
+                    width: 194%;
+                    height: auto;
+                }
+            }
+
+			.rebrickable_link{
+				text-decoration:none;
+			}
+
+			.rebrickable_link:hover{
+				text-decoration: underline;
+			}
+
+
+			@media (min-width: 1251px) {
+				.rebrickable{
+					width: 1172px; 
+					margin: 0 auto; 
+					display: flex; 
+					margin-top: 20px;
+					padding: 30px;
+					border-radius: 15px;
+				}
+
+				.rebrickable_mobile{
+					display: none;
+				}
+			}
+
+			@media (max-width: 1250px) {
+				.rebrickable{
+					display: none;
+				}
+
+				.rebrickable_mobile{
+					width: 85%;
+					margin-left: 7.5%;
+					padding: 20px;
+					border-radius: 10px;
+				}
+            }
+
+		</style>
+
+	</head>
+
+	<body>
+
+		<header>
+			<iframe src="header.html" width="100%" height="55px" frameborder="0" scrolling="no" alt="header"></iframe>
+		</header>
+
+		<main>
+
+			<!-- Banner -->
+			 <div style="width: 100%; overflow: hidden; display: flex; justify-content: center;">
+				<img src="images/banners/other_stuff_banner.png" class="banner">
+			</div>
+
+			<!--  Rebrickable -->
+			<div class="rebrickable page-background-color">
+				<div class="fade_in" style="display: flex;">
+					
+					<img src="images/other_stuff/Rebrickable.png" width="350px" height="350px" style="border-radius: 175px;">
+					
+					<div style="margin: auto; padding-left: 20px;" width="822px">
+						<a href="https://rebrickable.com/users/SM737/" style="text-decoration:none;"> <p style="font-size: 58px; max-width: 822px;" class="rebrickable_link title"> Rebrickable </p> </a>
+						<p style=" font-size: 23px; max-width: 822px;" class="text">
+							Recently I've re-developed my lego addiction and started designing MOC's on rebrickable.
+                            So far I've only made a couple Brickheadz of some characters from an anime I like but I might make more in the future.
+						</p>
+					</div>
+					
+				</div>
+			</div>
+
+			<!--  Rebrickable Mobile  -->
+			<div class="fade_in rebrickable_mobile page-background-color" style="margin-top: 20px;">
+
+				<img src="images/other_stuff/Rebrickable.png" width="100%" height="auto" style="border-radius: 100%;">
+				<a href="https://rebrickable.com/users/SM737/" style="text-decoration:none;">
+					<p style="margin-top: 10px; font-size: 40px; text-align: center;" width="100%" class="rebrickable_link title"> Rebrickable </p>
+				</a>
+
+			</div>
+
+		</main>
+
+        <footer style="bottom: 0px; width: 100%;">
+			<iframe src="footer.html" width="100%" height="35px" frameborder="0" scrolling="no" alt="footer"></iframe>
+		</footer>
+
+		<script src="scripts/fade_in.js"></script>
+
+</html>

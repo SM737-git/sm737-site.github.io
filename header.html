@@ -18,6 +18,10 @@
                 padding-top: 100px;
             }
 
+            .links{
+                float: right;
+                width: 405px;
+            }
 
             .home{
                 margin-top: 5px;
@@ -46,8 +50,35 @@
                 padding-top: 100px;
             }
 
-            @media (max-width: 479px) {
+            .other{
+                margin-top: 5px;
+                display: block;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                background: url(images/header/other_stuff_underlined.png) no-repeat;
+                background-size: contain;
+            }
+
+            .other:hover{
+                padding-top: 100px;
+            }
+
+            @media (max-width: 660px) {
                 .logo{display: none;}
+            }
+
+            @media (max-width: 660px) {
+                .links{
+                    float: none;
+                    margin-left: calc(50% - 202.5px);
+                }
+            }
+
+            @media (max-width: 415px) {
+                .links{
+                    margin-left: calc( (0.61% * ((100vw - 10px) / 405px)) - (0.5 * (405 - (100vw - 10px))) );
+                    scale: calc((100vw - 10px) / 405px);
+                }
             }
 
         </style>
@@ -57,16 +88,20 @@
     <body>
         <div style="background-color: #232223; height: 100px; padding: 5px">
             <div style="float: left;">
-                <a href="index" target="_parent"> <img src="images/header/logo.png" width="195px" height="37px" class="logo"> </a>
+                <a href="index.html" target="_parent"> <img src="images/header/logo.png" width="195px" height="37px" class="logo"> </a>
             </div>
 
-            <div style="float: right;" class="links">
-                <div style="float:left; padding-right: 12px;">
-                    <a href='index' target="_parent"> <img src="images/header/home.png" width="91" height="37px" class="home"> </a>
+            <div class="links">
+                <div style="float:left; padding-right: 20px;">
+                    <a href='index.html' target="_parent"> <img src="images/header/home.png" width="91" height="37px" class="home"> </a>
+                </div>
+
+                <div style="float:left; padding-right: 20px;">
+                    <a href='games.html' target="_parent"> <img src="images/header/games.png" width="108" height="37px" class="games"> </a>
                 </div>
 
                 <div style="float:left;">
-                    <a href='games' target="_parent"> <img src="images/header/games.png" width="108" height="37px" class="games"> </a>
+                    <a href='other-stuff.html' target="_parent"> <img src="images/header/other_stuff.png" width="166" height="37px" class="other"> </a>
                 </div>
 
             </div>

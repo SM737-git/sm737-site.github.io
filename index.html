@@ -15,6 +15,21 @@
 		<link rel="stylesheet" href="css/styles.css">
 		<style>
 
+			@media (min-width: 701px) {
+				.banner{
+					width: 1920px;
+					height: auto;
+				}
+			}
+
+			@media (max-width: 700px) {
+				.banner{
+					width: 274%;
+					height: auto;
+				}
+			}
+
+
 			.latest_project_cover{
 				border-width: 3px;
 				border-color: #ffffff00;
@@ -133,12 +148,12 @@
 			<div class="latest_project page-background-color">
 				<div class="fade_in" style="display: flex;">
 					
-					<a href="games/kittenbot_os" width="576px">
+					<a href="games/kittenbot_os.html" width="576px">
 						<img src="images/games/kittenbot_os.png" width="576px" height="auto" style="border-radius: 13px;" class="latest_project_cover">
 					</a>
 					
 					<div style="margin: auto; padding-left: 20px;" width="576px">
-						<a href="games/kittenbot_os" style="text-decoration:none;"> <p style="font-size: 58px; max-width: 576px;" class="latest_project_link title"> Latest Project </p> </a>
+						<a href="games/kittenbot_os.html" style="text-decoration:none;"> <p style="font-size: 58px; max-width: 576px;" class="latest_project_link title"> Latest Project </p> </a>
 						<p style=" font-size: 23px; max-width: 576px;" class="text">
 							Found my old <a class="link" href="https://www.kittenbot.cc/collections/meowbit" target="_blank">Meow Bit</a> and thought "Wouldn't it be cool if I could have multiple games on here?"
 						</p>
@@ -150,7 +165,7 @@
 			<!--  Latest Project Mobile  -->
 			<div class="fade_in latest_project_mobile page-background-color" style="margin-top: 20px;">
 
-				<a href="games/kittenbot_os" style="text-decoration:none;">
+				<a href="games/kittenbot_os.html" style="text-decoration:none;">
 					<img src="images/games/kittenbot_os.png" width="100%" height="auto" style="border-radius: 13px;" class="latest_project_cover">
 					<p style="margin-top: 10px; font-size: 40px; text-align: center;" width="100%" class="latest_project_link title"> Latest Project </p>
 				</a>
@@ -165,7 +180,15 @@
 				<div class="fade_in" style="display: flex; align-items: center;">
 					<div>
 						<p class="about_title title"> Hi! Welcome to SM737.site </p>
-						<p class="about_description text"> This is my website where I upload all my games / projects. I make games as a hobby and thought I should make a website for them. Feel free to check out my <a href="https://sm737.itch.io/" target=”_blank” class="link">itch.io</a> and <a href="https://sm737.newgrounds.com/" target=”_blank” class="link">newgrounds</a> pages.</p>
+						<p class="about_description text">
+							This is my website where I upload all my games / projects.
+							I make games and stuff as a hobby and thought I should make a website for them.
+							Feel free to check out my
+							<a href="https://sm737.itch.io/" target=”_blank” class="link">Itch.io</a>,
+							<a href="https://sm737.newgrounds.com/" target=”_blank” class="link">Newgrounds</a>
+							and
+							<a href="https://rebrickable.com/users/SM737/" target=”_blank” class="link">Rebrickable</a>
+							pages.</p>
 					</div>
 
 					<img class="about_logo" src="images/logo.svg" width="192px" height="auto" style="margin-left: 10px;">
@@ -184,5 +207,3 @@
 		<script src="scripts/fade_in.js"></script>
 
 </html>
-
-

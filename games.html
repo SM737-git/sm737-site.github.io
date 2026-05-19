@@ -15,6 +15,20 @@
 		<link rel="stylesheet" href="css/styles.css">
 		<style>
 
+			@media (min-width: 701px) {
+				.banner{
+					width: 1920px;
+					height: auto;
+				}
+			}
+
+			@media (max-width: 700px) {
+				.banner{
+					width: 274%;
+					height: auto;
+				}
+			}
+
 			.game_link{
 				text-decoration: none;
 				display: inline-block;
@@ -87,6 +101,12 @@
 
 			<div class="games">
 
+				<!--  Mini Volleyball  -->
+				<a href="games/mini_volleyball" class="game_link fade_in">
+					<img src="images/games/mini_volleyball.png" class="game_cover">
+					<p class="game_title title">Mini Volleyball</p>
+				</a>
+
 				<!--  Kittenbot OS  -->
 				<a href="games/kittenbot_os" class="game_link fade_in">
 					<img src="images/games/kittenbot_os.png" class="game_cover">
@@ -130,4 +150,3 @@
 
 	</body>
 </html>
-

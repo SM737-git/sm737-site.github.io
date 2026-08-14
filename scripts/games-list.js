@@ -10,7 +10,7 @@ var GamesList = [
         image : "images/game-covers/mini-volleyball.png",
         background : "images/game-backgrounds/mini-volleyball.png",
         page : "mini-volleyball",
-        iframe : "https://html-classic.itch.zone/html/18781801/index.html"
+        iframe : "https://itch.io/embed-upload/18781801?color=232223"
     },
     {
         name : "Kittenbot OS",
@@ -23,7 +23,7 @@ var GamesList = [
         image : "images/game-covers/kittenbot-os.svg",
         background : "images/game-backgrounds/kittenbot-os.png",
         page : "kittenbot-os",
-        iframe : "https://trg-arcade.userpxt.io/---simulator#sim-frame-105548061251713950.8387016069396543"
+        iframe : "https://arcade.makecode.com/S05657-93404-12514-91810"
     },
     {
         name : "Litter in the River",
@@ -38,7 +38,7 @@ var GamesList = [
         image : "images/game-covers/litter-in-the-river.svg",
         background : "images/game-backgrounds/litter-in-the-river.png",
         page : "litter-in-the-river",
-        iframe : "https://html-classic.itch.zone/html/18781814/index.html"
+        iframe : "https://itch.io/embed-upload/18781814?color=232223"
     },
     {
         name : "Paper Plane",
@@ -55,7 +55,7 @@ var GamesList = [
         image : "images/game-covers/paper-plane.svg",
         background : "images/game-backgrounds/paper-plane.png",
         page : "paper-plane",
-        iframe : "https://html-classic.itch.zone/html/18781832/index.html"
+        iframe : "https://itch.io/embed-upload/18781832?color=232223"
     },
     {
         name : "Dino Game",
@@ -68,7 +68,7 @@ var GamesList = [
         image : "images/game-covers/dino-game.svg",
         background : "images/game-backgrounds/dino-game.png",
         page : "dino-game",
-        iframe : "https://html-classic.itch.zone/html/18781844/index.html"
+        iframe : "https://itch.io/embed-upload/18781844?color=232223"
     },
     {
         name : "Coin Clicker",
@@ -81,6 +81,6 @@ var GamesList = [
         image : "images/game-covers/coin-clicker.svg",
         background : "images/game-backgrounds/coin-clicker.png",
         page : "coin-clicker",
-        iframe : "https://html-classic.itch.zone/html/18781852/index.html"
+        iframe : "https://itch.io/embed-upload/18781852?color=232223"
     },
 ]

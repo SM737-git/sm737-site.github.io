@@ -82,7 +82,7 @@
             Page.innerHTML = `
                 <div style="display: flex; min-height: calc(100vh - 60px); align-items: center;">
                     <div class="FadeIn" style="width: min(1400px,85%); margin: auto; margin-top: 15px; margin-bottom: 15px; border-radius: 10px">
-                        <div id="GameWrapper" style="width: 100%; aspect-ratio: 16 / 9; display: flex; background-image: url('` + Game.background + `'); background-size: cover;">
+                        <div id="GameWrapper" style="width: 100%; aspect-ratio: 1280 / 740; display: flex; background-image: url('` + Game.background + `'); background-size: cover;">
                             <img onclick="StartGame()" onmouseenter="this.src = 'images/game-options/play-hovered.svg'" onmouseleave="this.src = 'images/game-options/play.svg'" src="images/game-options/play.svg" style="height: 50px; cursor: pointer; margin: auto;">
                         </div>
                         <div id="GameOptionsAndDescription" style="height: 60px; transition: height 0.2s; background-color: var(--ContentBgColor);">
@@ -102,10 +102,6 @@
                     </div>
                 </div>
             `
-
-            if (Game.name == "Kittenbot OS") {
-                document.getElementById("GameWrapper").innerHTML = '<iframe id="GameIframe" style="width: 100%; height: 100%;" src="https://arcade.makecode.com/S05657-93404-12514-91810" allowfullscreen="allowfullscreen" sandbox="allow-popups allow-forms allow-scripts allow-same-origin" frameborder="0"></iframe>'
-            }
 
           Page.innerHTML += InsertFooter()
 

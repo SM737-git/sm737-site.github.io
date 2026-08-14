@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+
+		<!-- Metadata -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1"">
+
+		<!-- Title + Favicon -->
+		<title>SM737.Site</title>
+		<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+		<link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
+		<link rel="stylesheet" href="stylesheet.css">
+
+	</head>
+
+	<body>
+        <iframe id="Header" src="iframes/header.html"></iframe>
+        <div id="ViewportWrapper" data-simplebar data-simplebar-auto-hide="false">
+			<div id="PageContent">
+
+			</div>
+        </div>
+
+        <noscript>
+            <style>html{display:none;}</style>
+            <meta http-equiv="refresh" content="0.0;url=no-js">
+        </noscript>
+
+    </body>
+
+	<script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+    <script src="scripts/fade-in.js"></script>
+    <script src="scripts/insert-functions.js"></script>
+    <script src="scripts/games-list.js"></script>
+    <script>
+		let Page = document.getElementById("PageContent")
+
+        Page.innerHTML += InsertBanner("images/banners/games-banner.svg",274)
+
+        let text_on_left = false
+        for (let i = 0; i < GamesList.length; i++) {
+            Page.innerHTML +=InsertContentBox(GamesList[i].name,GamesList[i].image,"10px",true,false,GamesList[i].description,GamesList[i].page,280,text_on_left,false)
+            if (text_on_left) {
+                text_on_left = false
+            } else {
+                text_on_left = true
+            }
+        }
+
+		Page.innerHTML +=InsertFooter()
+		
+    </script>
+
+</html>

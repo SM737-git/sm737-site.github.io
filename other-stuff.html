@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+
+		<!-- Metadata -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1"">
+
+		<!-- Title + Favicon -->
+		<title>SM737.Site</title>
+		<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+		<link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
+		<link rel="stylesheet" href="stylesheet.css">
+
+        <noscript>
+            <style>html{display:none;}</style>
+            <meta http-equiv="refresh" content="0.0;url=no-js">
+        </noscript>
+		
+	</head>
+
+	<body>
+        <iframe id="Header" src="iframes/header.html"></iframe>
+        <div id="ViewportWrapper" data-simplebar data-simplebar-auto-hide="false">
+			<div id="PageContent">
+
+			</div>
+        </div>
+
+    </body>
+
+	<script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+    <script src="scripts/fade-in.js"></script>
+    <script src="scripts/insert-functions.js"></script>
+    <script src="scripts/games-list.js"></script>
+    <script>
+		let Page = document.getElementById("PageContent")
+
+        Page.innerHTML += InsertBanner("images/banners/other-stuff-banner.svg",180)
+
+		Page.innerHTML +=InsertContentBox(
+			"Rebrickable",
+			"images/other-stuff/rebrickable.png",
+			"10px",
+			true,
+            false,
+			`
+            <p>Recently I've re-developed my lego addiction and started designing MOC's on rebrickable. So far I've made a dozen or so Brickheadz of characters from some TV shows I like and two mini cars. I'll problably make more in the future.</p>
+            `,
+			"https://rebrickable.com/users/SM737/",
+			350,
+			false,
+			false
+		)
+
+		Page.innerHTML +=InsertContentBox(
+			"Planet Minecraft",
+			"images/other-stuff/planet-mc.png",
+			"10px",
+			true,
+            true,
+			`
+            <p>I sometimes build random things in Minecraft and thought that I would share a couple of them. Feel free to check them out.</p>
+            `,
+			"https://www.planetminecraft.com/member/sm737/",
+			350,
+			true,
+			false
+		)
+
+		Page.innerHTML +=InsertFooter()
+
+    </script>
+
+</html>

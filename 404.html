@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+
+		<!-- Metadata -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1"">
+
+		<!-- Title + Favicon -->
+		<title>SM737.Site</title>
+		<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+        <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
+		<link rel="stylesheet" href="stylesheet.css">
+
+        <style>
+
+            @media (max-width: 775px) {
+                #ErrorPageRobotImage{
+                    display: none;
+                }
+            }
+
+            #Footer{
+                margin-top: 0px;
+            }
+
+        </style>
+
+        <noscript>
+            <style>html{display:none;}</style>
+            <meta http-equiv="refresh" content="0.0;url=no-js">
+        </noscript>
+
+	</head>
+
+	<body>
+        <iframe id="Header" src="iframes/header.html"></iframe>
+        <div id="ViewportWrapper" data-simplebar data-simplebar-auto-hide="false">
+		    <div id="PageContent">
+
+            </div>
+		</div>
+
+    </body>
+
+    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+    <script src="scripts/fade-in.js"></script>
+    <script src="scripts/insert-functions.js"></script>
+    <script src="scripts/games-list.js"></script>
+    <script>
+        let Path = window.location.pathname;
+
+        let Game
+        for (let i = 0; i < GamesList.length; i++) {
+            if (Path == "/" + GamesList[i].page) {
+                Game = GamesList[i]
+            }
+        }
+
+        let Page = document.getElementById("PageContent")
+        if (!Game) {
+
+            Page.innerHTML += `
+                <div style="height: 400px; width: min(1000px,85%); margin: auto; margin-top: calc(0.5 * (100vh - 550px)); display: flex;">
+                    <div style="height: fit-content; margin-top: auto; margin-bottom: auto; float: left;">
+                        <p style="color: var(--HeadingColor); font-family: Sonorus; font-size: 58px;">Page Not Found...</p>
+                        <p>You problably typed the url wrong, or somethings wrong with the websites repository.</p>
+                        <br>
+                        <p><a href="index">Click here to return to the home page.</a></p>
+                    </div>
+
+                    <img id="ErrorPageRobotImage" src="images/404.svg" style="height: 350px; width: auto; float: right; flex-shrink: 0; margin: auto; margin-right: 0px; padding-left: 15px;">
+                </div>
+
+                <iframe id="Footer" src="iframes/footer.html" style="position: absolute; bottom: 0px;"></iframe>
+            `
+
+        } else {
+            
+            Page.innerHTML = `
+                <div style="display: flex; min-height: calc(100vh - 60px); align-items: center;">
+                    <div class="FadeIn" style="width: min(1400px,85%); margin: auto; margin-top: 15px; margin-bottom: 15px; border-radius: 10px">
+                        <div id="GameWrapper" style="width: 100%; aspect-ratio: 16 / 9; display: flex; background-image: url('` + Game.background + `'); background-size: cover;">
+                            <img onclick="StartGame()" onmouseenter="this.src = 'images/game-options/play-hovered.svg'" onmouseleave="this.src = 'images/game-options/play.svg'" src="images/game-options/play.svg" style="height: 50px; cursor: pointer; margin: auto;">
+                        </div>
+                        <div id="GameOptionsAndDescription" style="height: 60px; transition: height 0.2s; background-color: var(--ContentBgColor);">
+                            <div style="width: 100%; height: 60px; display: flex;">
+                                <p style="font-family: sonorus; font-size: 30px; margin: 15px;">` + Game.name + `</p>
+                                <div style="margin: 12.5px; margin-left: auto; height: 35px;">
+                                    <img id="GameDescriptionToggle" src="images/game-options/open-description.svg" onclick="ToggleDescription()" style="height: 100%; width: auto; cursor: pointer; margin-right: 5px;">
+                                    <img src="images/game-options/fullscreen.svg" onclick="Fullscreen()" style="height: 100%; width: auto; cursor: pointer;">
+                                </div>
+                            </div>
+
+                            <div id="GameDescription" style="padding: 15px; padding-top: 0px;">
+                                ` + Game.description + Game.extended_description + `
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            `
+
+            if (Game.name == "Kittenbot OS") {
+                document.getElementById("GameWrapper").innerHTML = '<iframe id="GameIframe" style="width: 100%; height: 100%;" src="https://arcade.makecode.com/S05657-93404-12514-91810" allowfullscreen="allowfullscreen" sandbox="allow-popups allow-forms allow-scripts allow-same-origin" frameborder="0"></iframe>'
+            }
+
+          Page.innerHTML += InsertFooter()
+
+        }
+
+        function StartGame() {
+            document.getElementById("GameWrapper").innerHTML = '<iframe id="GameIframe" allow="autoplay" src="' + Game.iframe + '" style="width: 100%; aspect-ratio: 16 / 9; border: none;"></iframe>'
+        }
+
+        function ToggleDescription() {
+            let div = document.getElementById("GameOptionsAndDescription")
+            let desc = document.getElementById("GameDescription")
+            let toggle = document.getElementById("GameDescriptionToggle")
+
+            if (div.style.height == "60px") {
+                div.style.height = String(60 + desc.offsetHeight) + "px"
+                toggle.src = "images/game-options/close-description.svg"
+            } else {
+                div.style.height = "60px"
+                toggle.src = "images/game-options/open-description.svg"
+            }
+        }
+
+        function Fullscreen() {
+            if (document.getElementById("GameIframe")) {
+                document.getElementById("GameIframe").requestFullscreen();
+            }
+        }
+
+    </script>
+
+</html>

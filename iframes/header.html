@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <link rel="stylesheet" href="../stylesheet.css">
+
+        <style>
+
+            body{width: 100%; height: 60px; background-color: var(--ContentBgColor); overflow: hidden;}
+
+            #HomeButton, #GamesButton, #OtherStuffButton {
+                height: min(34px,6.8vw);
+                padding-top: 16px;
+                padding-bottom: 10px;
+            }
+
+            #TitleButton{
+                margin-left: 10px;
+                height: 40px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+            #HomeButton, #GamesButton{
+                margin-right: min(20px,4vw);
+            }
+
+            @media (min-width: 841px) {
+                #HeaderButtonWrapper{
+                    float: right;
+                    margin-right: 10px;
+                }
+            }
+
+            @media (max-width: 840px) {
+                #TitleButton{display: none;}
+                #HeaderButtonWrapper{
+                    width: fit-content;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+
+        </style>
+    </head>
+
+	<body>
+        <a href="../index" target="_top">
+            <img id="TitleButton" src="../images/header/title.svg" onmouseenter="OnButtonMouseEnter('TitleButton')" onmouseleave="OnButtonMouseLeave('TitleButton')">
+        </a>
+
+        <div id="HeaderButtonWrapper">
+
+            <a href="../index" target="_top">
+                <img id="HomeButton" src="../images/header/home.svg" onmouseenter="OnButtonMouseEnter('HomeButton')" onmouseleave="OnButtonMouseLeave('HomeButton')">
+            </a>
+
+            <a href="../games" target="_top">
+                <img id="GamesButton" src="../images/header/games.svg" onmouseenter="OnButtonMouseEnter('GamesButton')" onmouseleave="OnButtonMouseLeave('GamesButton')">
+            </a>
+
+            <a href="../other-stuff" target="_top">
+                <img id="OtherStuffButton" src="../images/header/other-stuff.svg" onmouseenter="OnButtonMouseEnter('OtherStuffButton')" onmouseleave="OnButtonMouseLeave('OtherStuffButton')">
+            </a>
+
+        </div>
+
+    </body>
+
+    <script>
+
+        var ButtonImageResources = {
+            "TitleButton" : "../images/header/title",
+            "HomeButton" : "../images/header/home",
+            "GamesButton" : "../images/header/games",
+            "OtherStuffButton" : "../images/header/other-stuff",
+        }
+
+        function OnButtonMouseEnter(button_id) {
+            document.getElementById(button_id).src = ButtonImageResources[button_id] + "-hovered.svg"
+        }
+
+        function OnButtonMouseLeave(button_id) {
+            document.getElementById(button_id).src = ButtonImageResources[button_id] + ".svg"
+        }
+
+    </script>
+
+</html>

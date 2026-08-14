@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+
+		<!-- Metadata -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1"">
+
+		<!-- Title + Favicon -->
+		<title>SM737.Site</title>
+		<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+		<link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
+		<link rel="stylesheet" href="stylesheet.css">
+
+        <noscript>
+            <style>html{display:none;}</style>
+            <meta http-equiv="refresh" content="0.0;url=no-js">
+        </noscript>
+
+	</head>
+
+	<body>
+        <iframe id="Header" src="iframes/header.html"></iframe>
+        <div id="ViewportWrapper" data-simplebar data-simplebar-auto-hide="false">
+			<div id="PageContent">
+
+			</div>
+        </div>
+
+    </body>
+
+	<script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+    <script src="scripts/fade-in.js"></script>
+    <script src="scripts/insert-functions.js"></script>
+    <script src="scripts/games-list.js"></script>
+    <script>
+		let Page = document.getElementById("PageContent")
+
+        Page.innerHTML += InsertBanner("images/banners/home-banner.svg",274)
+
+		Page.innerHTML +=InsertContentBox(
+			"Latest Game",
+			"images/game-covers/mini-volleyball.png",
+			"10px",
+			true,
+			false,
+			GamesList[0].description,
+			GamesList[0].page,
+			400,
+			false,
+			false
+		)
+
+		Page.innerHTML +=InsertContentBox(
+			"Hello World!",
+			"images/icon.svg",
+			"50%",
+			false,
+			false,
+			`<p class="about_description text">
+				This is my website where I upload all my games / projects. I make games and stuff as a hobby and thought I should make a website for them.
+				</br>
+				Feel free to check out my
+				<a href="https://sm737.itch.io/" target="”_blank”" class="link">Itch.io</a>,
+				<a href="https://sm737.newgrounds.com/" target="”_blank”" class="link">Newgrounds</a>,
+				<a href="https://rebrickable.com/users/SM737/" target="”_blank”" class="link">Rebrickable</a>
+				and
+				<a href="https://www.planetminecraft.com/member/sm737/" target="”_blank”" class="link">Planet Minecraft</a>
+				pages.
+			</p>`,
+			"",
+			250,
+			true,
+			true
+		)
+
+		Page.innerHTML +=InsertFooter()
+
+    </script>
+
+</html>

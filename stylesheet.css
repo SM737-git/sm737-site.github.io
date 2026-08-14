@@ -1,0 +1,225 @@
+/* Simplebar */
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+*::-webkit-scrollbar { 
+    display: none;
+}
+.simplebar-scrollbar::before {
+    display: none;
+}
+
+.simplebar-scrollbar {
+    background-color: var(--GreyColor);
+    width: 15px;
+    border-radius: 10px;
+    opacity: 1;
+}
+.simplebar-track{
+    overflow: visible;
+    right: 10px;
+}
+
+/* Element Tweaks */
+*{
+    margin: 0px; overflow: hidden;
+}
+
+body{
+    background-color: var(--PageBgColor);
+}
+
+a{
+    text-decoration: none;
+}
+
+p {
+    color: var(--TextColor);
+    font-family: VarelaRound;
+    font-size: 23px;
+}
+
+p a{
+    text-decoration: none;
+    color: var(--LinkColor);
+}
+
+p a:hover{
+    text-decoration: underline;
+}
+
+img, iframe{
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+/* Colors & Fonts */
+:root{
+    --PageBgColor: #131213;
+    --ContentBgColor: #232223;
+
+    --GreyColor: #9F9F9F;
+
+    --HeadingColor: #ffffff;
+    --TextColor: #ececec;
+    --LinkColor: #c3e5ff;
+}
+@font-face {
+    font-family: Sonorus;
+    src: url(fonts/Sonorous.otf);
+}
+@font-face {
+    font-family: VarelaRound;
+    src: url(fonts/VarelaRound.ttf);
+}
+
+/* Fade In Anim */
+.FadeIn{
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+    transition: opacity 0.5s ease, transform 0.3s ease;
+}
+
+.FadeIn.Visible{
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* Header Iframe */
+#Header{
+    display: block;
+    width: min(100%,1920px);
+    margin-left: auto;
+    margin-right: auto;
+    height: 60px;
+    border: none;
+    overflow: hidden;
+}
+
+/* Footer Iframe */
+#Footer{
+    margin-top: 15px;
+    display: block;
+    width: min(100%,1920px);
+    margin-left: auto;
+    margin-right: auto;
+    height: 40px;
+    border: none;
+    overflow: hidden;
+}
+
+/* Page Wrapper & Content */
+#ViewportWrapper{
+    width: 100vw;
+    height: calc(100vh - 60px);
+    overflow-y: scroll;
+}
+
+#PageContent{
+    width: 100vw;
+    height: fit-content;
+    min-height: calc(100vh - 60px);
+    background-image: url("images/bg.svg");
+    background-repeat: repeat-y;
+    background-position: center;
+    background-size:1920px;
+    background-attachment: scroll;
+}
+
+/* Desktop Content Boxes */
+.DesktopContentBox{
+    background-color: var(--ContentBgColor);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: 15px;
+}
+
+@media (max-width: 985px){
+    .DesktopContentBox{
+        display: none;
+    }
+}
+
+.DesktopContentBoxImage, .DesktopContentBoxImageLink{
+    flex-shrink: 0;
+    z-index: 1;
+}
+
+.DesktopContentBoxImageLink:hover{
+    outline: 3px var(--HeadingColor) solid;
+}
+
+.DesktopContentBoxTitle{
+    color: var(--HeadingColor);
+    font-family: Sonorus;
+    text-decoration: none;
+    font-size: 58px;
+}
+
+.DesktopContentBoxTitleLink:hover {
+    text-decoration: underline;
+    color: var(--HeadingColor);
+}
+
+.DesktopContentBoxTextFadeGradient{
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    left: 0px;
+    bottom: 30px;
+    background-image: linear-gradient(to bottom, #00000000 , var(--ContentBgColor));
+}
+
+/* Mobile Content Boxes */
+
+.MobileContentBox{
+    display: block;
+    width: calc(85% - 60px);
+    background-color: var(--ContentBgColor);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    padding-bottom: 12px; /* removes some padding from bottom as it normaly accounts for underline parts of the font making it look weird.*/
+    border-radius: 40px;
+    position: relative;
+    margin-top: 15px;
+    text-align: center;
+}
+
+@media (min-width: 986px){
+    .MobileContentBox{
+        display: none;
+    }
+}
+
+.MobileContentBoxImage{
+    width: 100%;
+}
+
+.MobileContentBoxImageHoverable:hover{
+    outline: 3px var(--HeadingColor) solid;
+}
+
+.MobileContentBoxTitle{
+    color: var(--HeadingColor);
+    font-family: Sonorus;
+    text-decoration: none;
+    font-size: min(58px,11.83vw);
+    width: fit-content;
+    margin:auto;
+    margin-top: 15px;
+}
+
+.MobileContentBoxTitleLink:hover {
+    text-decoration: underline;
+    color: var(--HeadingColor);
+}
